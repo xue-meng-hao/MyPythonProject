@@ -16,5 +16,4 @@ bus1 = Bus("blue", 1)
 bus2 = Bus("red", 2)
 print(Bus.length)
 print(bus2.length)
-
 print(type(bus1))
