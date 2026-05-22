@@ -11,15 +11,15 @@
 # print(f"取款后余额是：{total - int(count)}")
 
 
-num=-4
+num = -4
 # print(num)
 
-if num//3==0:
+if num // 3 == 0:
     print("1")
-elif num//3<0:
+elif num // 3 < 0:
     # print(num%2)
     print("2")
 else:
     print("3")
 
-print(num//3)
+print(num // 3)
