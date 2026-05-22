@@ -1,5 +1,5 @@
-def welcome():
-    print("Welcome!")
+def welcome(str):
+    print(f"Welcome!{str}")
 
 
 # 函数也是一个对象
@@ -10,7 +10,7 @@ print(welcome.desc)
 # 函数可以赋值给变量
 
 say_hello = welcome
-say_hello()
+say_hello("hello")
 print(say_hello.desc)
 
 a = 666
@@ -28,3 +28,24 @@ list1 = [1, 2, 3]
 print(id(list1))
 list1[0] = 33
 print(id(list1))
+
+
+# 函数也可以作为参数
+
+def test2(t1):
+    print(f"调用了test2:{id(t1)}")
+    t1("test2测试test1")
+
+
+test2(welcome)
+
+
+# 函数也可以作为返回值
+def test3(t1):
+    t1.desc = "哈哈哈"
+    return t1
+
+
+ret = test3(welcome)
+print(ret.desc)
+ret("测试")
