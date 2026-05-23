@@ -78,6 +78,7 @@ print(new_strs)
 # 从functools模块导入reduce函数
 from functools import reduce
 
+# 数值统计
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-sum = reduce(lambda a, b: a + b, nums)
+sum = reduce(lambda a, b: a + b, nums, 11)
 print(sum)
