@@ -48,6 +48,8 @@ num_list2 = [333, 444, 555, 666]
 # 解包和组包
 num_list3 = [*num_list1, *num_list2]
 print(num_list3)
+num_list1.append(666)
+print(num_list1)
 num_list4 = num_list1 + num_list2
 print(num_list4)
 
