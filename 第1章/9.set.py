@@ -8,7 +8,7 @@ set2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 print(set2)
 
 set3 = set1.intersection(set2)
-print(set3)
+print(f"-------{set3}")
 set3 = set1 & set2
 print(set3)
 
@@ -56,3 +56,53 @@ print(set8)
 a = set8.pop()
 print(a)
 print(set8)
+
+# 集合常用方法：
+# 集合A.difference(集合B):找到集合A中不同于集合B的元素，A和B都不变，返回一个新的集合
+
+setA = {1, 2, 3, 4, 5}
+setB = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+setC = setA.difference(setB)
+print(setC)
+setC = setB.difference(setA)
+print(setC)
+
+# 集合A.difference_update(集合B):从集合A中删除集合B中存在的元素（集合A被修改，集合B不变）,返回None
+setB.difference_update(setA)
+print(setA)
+print(setB)
+
+# 集合A.union(集合B):返回一个新的集合，包含集合A和集合B中的所有元素，集合A和集合B都不变
+setD = setA.union(setB)
+print(setD)
+
+# 集合A.issubset(集合B):判断集合B是否为集合A的子集，返回值为boolean值
+setA = {1, 2, 3, 4, 5}
+setB = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+if setA.issubset(setB):
+    print("setA是setB的子集")
+else:
+    print("setA不是setB的子集")
+
+# 集合A.issuperset(集合B):判断集合A是否为集合B的父集，返回值为boolean值
+if setB.issuperset(setA):
+    print("setB是setA的父集")
+
+# 集合A.isdisjoint(集合B):判断集合A和集合B是否没有交集，返回值为boolean值
+if setA.isdisjoint(setB):
+    print("setA和setB没有交集")
+else:
+    print("setA和setB有交集")
+
+# 并集|，交集&，差集-，对称差集^
+setA = {1, 2, 3, 4, 5}
+setB = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+setC = setA | setB
+print(setC)
+setD = setA & setB
+print(setD)
+setE = setB - setA
+print(setE)
+# 对称差集，表示不存在setA但存在setB
+setF = setA ^ setB
+print(setF)
