@@ -46,3 +46,23 @@ print(my_dir_list)
 # 三元运算符
 a = "1" if not my_dir_list[0] else "2"
 print(a)
+
+
+
+import os
+
+if not os.path.isdir("./json"):
+    os.makedirs("./json")
+# with open("./json.json", 'rb') as f1, open("./json/json.json", "wb") as f2:
+#     data = f1.read()
+#     f2.write(data)
+
+# 处理大文件时候，不一次性读出所有数据再写入，而是将数据分批读取，写入
+with open("./json.json", 'rb') as f1, open("./json/json.json", "wb") as f2:
+    while True:
+        data = f1.read(1)
+        print(data)
+        if len(data) == 0:
+            break
+        f2.write(data)
+    print("copy over")
