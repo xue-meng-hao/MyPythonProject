@@ -45,3 +45,13 @@ bus1 = Bus("blue", 3, 15)
 bus1.run()
 taxi1 = Taxi("yellow", 4, 5)
 taxi1.run()
+# isinstance判断某个对象是否为某个类的对象
+print(isinstance(bus1, Bus))
+
+print(isinstance(bus1, Car))
+
+print(isinstance(bus1, Person))
+# issubclass判断某个类是否为某个类的子类
+print(issubclass(Taxi, Car))
+
+print(issubclass(Taxi, Person))

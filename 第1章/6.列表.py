@@ -48,6 +48,8 @@ num_list2 = [333, 444, 555, 666]
 # 解包和组包
 num_list3 = [*num_list1, *num_list2]
 print(num_list3)
+num_list1.append(666)
+print(num_list1)
 num_list4 = num_list1 + num_list2
 print(num_list4)
 
@@ -55,5 +57,45 @@ print(num_list4)
 num_list5 = [i ** 2 for i in range(1, 21)]
 print(num_list5)
 
-num_list6 = [i**2 for i in range(1, 21) if i % 2 == 0]
+num_list6 = [i ** 2 for i in range(1, 21) if i % 2 == 0]
 print(num_list6)
+
+list11 = [1, 2, 3, 4, 5]
+# 使用append添加
+list11.append(6)
+print(list11)
+
+list12 = [1, 2, 3, 4, 5]
+# 使用insert添加
+list12.insert(0, 6)
+print(list12)
+
+list13 = [1, 2, 3, 4, 5]
+# 使用extend添加
+list13.extend("test")
+print(list13)
+
+list14 = [1, 2, 3, 4, 5]
+# 使用pop删除指定下标的数
+value = list14.pop(0)
+print(value)
+print(list14)
+
+list15 = [1, 2, 3, 4, 5]
+# 使用remove删除列表中第一个出现的值
+list15.remove(3)
+print(list15)
+
+list16 = [1, 2, 3, 4, 5]
+# 使用clear清空列表
+list16.clear()
+print(list16)
+
+list17 = [1, 2, 3, 4, 5]
+# 使用del删除指定下标值
+del list17[0]
+print(list17)
+
+# 使用enumerate遍历列表，通过enumerate可以同时获取下标和元素
+for index, item in enumerate([1, 2, 3]):
+    print(index, item)

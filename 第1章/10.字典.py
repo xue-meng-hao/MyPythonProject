@@ -5,6 +5,9 @@ print(direct1.get(2))
 print(direct1.get(3))
 print(type(direct1))
 
+direct1.update({"李四": 4})
+print(direct1)
+
 set1={1,23}
 set2={"test","test"}
 direct2={"set1":set1,"set2":set2}

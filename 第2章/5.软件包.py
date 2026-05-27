@@ -1,4 +1,4 @@
-# _init__就是描述当前包信息的
+# _init__就是描述当前包信息的,__init__.py文件中i当以的内容,会被 [from 包名 import *] 全部引用
 # 一个包包含多个模块，一个模块包含多个功能
 
 # 包含__init__.python的文件夹才算是包
@@ -17,11 +17,15 @@
 # from module1 import my_fun
 from module1 import *
 
+# 使用from包名import *
 # 如果要导入包下所有模块，需要在__init__文件中添加__all__，指定模块
 
 my_fun.out_line()
 my_fun.out_line1()
 
 from module1.my_fun import out_line
+
 my_fun.out_line()
 my_fun.out_line1()
+
+# 推荐在__init__.py文件中使用import把模块引入
