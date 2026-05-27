@@ -1,6 +1,6 @@
 import os
 import time
-from multiprocessing import Process, current_process
+from multiprocessing import Process, current_process,Lock
 
 
 def speek(a,msg):
