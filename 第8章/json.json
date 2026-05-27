@@ -1,0 +1,10 @@
+{
+  "name": "二货",
+  "age": 11,
+  "gender": "female",
+  "hobby": [
+    "drawing",
+    "swimming",
+    "reading"
+  ]
+}
